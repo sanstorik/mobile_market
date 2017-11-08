@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89B1FB5D1FB3169B0088759B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB5C1FB3169B0088759B /* AppDelegate.swift */; };
+		89B1FB5F1FB3169B0088759B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB5E1FB3169B0088759B /* ViewController.swift */; };
+		89B1FB621FB3169B0088759B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B1FB601FB3169B0088759B /* Main.storyboard */; };
+		89B1FB641FB3169B0088759B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B1FB631FB3169B0088759B /* Assets.xcassets */; };
+		89B1FB671FB3169B0088759B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B1FB651FB3169B0088759B /* LaunchScreen.storyboard */; };
+		89B1FB721FB3169B0088759B /* citrus_marketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB711FB3169B0088759B /* citrus_marketTests.swift */; };
+		89B1FB7D1FB3169B0088759B /* citrus_marketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB7C1FB3169B0088759B /* citrus_marketUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89B1FB6E1FB3169B0088759B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89B1FB511FB3169B0088759B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89B1FB581FB3169B0088759B;
+			remoteInfo = citrus_market;
+		};
+		89B1FB791FB3169B0088759B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89B1FB511FB3169B0088759B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89B1FB581FB3169B0088759B;
+			remoteInfo = citrus_market;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		89B1FB591FB3169B0088759B /* citrus_market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = citrus_market.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B1FB5C1FB3169B0088759B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		89B1FB5E1FB3169B0088759B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89B1FB611FB3169B0088759B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89B1FB631FB3169B0088759B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		89B1FB661FB3169B0088759B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89B1FB681FB3169B0088759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B1FB6D1FB3169B0088759B /* citrus_marketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = citrus_marketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B1FB711FB3169B0088759B /* citrus_marketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = citrus_marketTests.swift; sourceTree = "<group>"; };
+		89B1FB731FB3169B0088759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B1FB781FB3169B0088759B /* citrus_marketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = citrus_marketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B1FB7C1FB3169B0088759B /* citrus_marketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = citrus_marketUITests.swift; sourceTree = "<group>"; };
+		89B1FB7E1FB3169B0088759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89B1FB561FB3169B0088759B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B1FB6A1FB3169B0088759B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B1FB751FB3169B0088759B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89B1FB501FB3169B0088759B = {
+			isa = PBXGroup;
+			children = (
+				89B1FB5B1FB3169B0088759B /* citrus_market */,
+				89B1FB701FB3169B0088759B /* citrus_marketTests */,
+				89B1FB7B1FB3169B0088759B /* citrus_marketUITests */,
+				89B1FB5A1FB3169B0088759B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89B1FB5A1FB3169B0088759B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89B1FB591FB3169B0088759B /* citrus_market.app */,
+				89B1FB6D1FB3169B0088759B /* citrus_marketTests.xctest */,
+				89B1FB781FB3169B0088759B /* citrus_marketUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89B1FB5B1FB3169B0088759B /* citrus_market */ = {
+			isa = PBXGroup;
+			children = (
+				89B1FB5C1FB3169B0088759B /* AppDelegate.swift */,
+				89B1FB5E1FB3169B0088759B /* ViewController.swift */,
+				89B1FB601FB3169B0088759B /* Main.storyboard */,
+				89B1FB631FB3169B0088759B /* Assets.xcassets */,
+				89B1FB651FB3169B0088759B /* LaunchScreen.storyboard */,
+				89B1FB681FB3169B0088759B /* Info.plist */,
+			);
+			path = citrus_market;
+			sourceTree = "<group>";
+		};
+		89B1FB701FB3169B0088759B /* citrus_marketTests */ = {
+			isa = PBXGroup;
+			children = (
+				89B1FB711FB3169B0088759B /* citrus_marketTests.swift */,
+				89B1FB731FB3169B0088759B /* Info.plist */,
+			);
+			path = citrus_marketTests;
+			sourceTree = "<group>";
+		};
+		89B1FB7B1FB3169B0088759B /* citrus_marketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				89B1FB7C1FB3169B0088759B /* citrus_marketUITests.swift */,
+				89B1FB7E1FB3169B0088759B /* Info.plist */,
+			);
+			path = citrus_marketUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89B1FB581FB3169B0088759B /* citrus_market */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89B1FB811FB3169B0088759B /* Build configuration list for PBXNativeTarget "citrus_market" */;
+			buildPhases = (
+				89B1FB551FB3169B0088759B /* Sources */,
+				89B1FB561FB3169B0088759B /* Frameworks */,
+				89B1FB571FB3169B0088759B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = citrus_market;
+			productName = citrus_market;
+			productReference = 89B1FB591FB3169B0088759B /* citrus_market.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89B1FB6C1FB3169B0088759B /* citrus_marketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89B1FB841FB3169B0088759B /* Build configuration list for PBXNativeTarget "citrus_marketTests" */;
+			buildPhases = (
+				89B1FB691FB3169B0088759B /* Sources */,
+				89B1FB6A1FB3169B0088759B /* Frameworks */,
+				89B1FB6B1FB3169B0088759B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89B1FB6F1FB3169B0088759B /* PBXTargetDependency */,
+			);
+			name = citrus_marketTests;
+			productName = citrus_marketTests;
+			productReference = 89B1FB6D1FB3169B0088759B /* citrus_marketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		89B1FB771FB3169B0088759B /* citrus_marketUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89B1FB871FB3169B0088759B /* Build configuration list for PBXNativeTarget "citrus_marketUITests" */;
+			buildPhases = (
+				89B1FB741FB3169B0088759B /* Sources */,
+				89B1FB751FB3169B0088759B /* Frameworks */,
+				89B1FB761FB3169B0088759B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89B1FB7A1FB3169B0088759B /* PBXTargetDependency */,
+			);
+			name = citrus_marketUITests;
+			productName = citrus_marketUITests;
+			productReference = 89B1FB781FB3169B0088759B /* citrus_marketUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89B1FB511FB3169B0088759B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Chloe;
+				TargetAttributes = {
+					89B1FB581FB3169B0088759B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					89B1FB6C1FB3169B0088759B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 89B1FB581FB3169B0088759B;
+					};
+					89B1FB771FB3169B0088759B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 89B1FB581FB3169B0088759B;
+					};
+				};
+			};
+			buildConfigurationList = 89B1FB541FB3169B0088759B /* Build configuration list for PBXProject "citrus_market" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89B1FB501FB3169B0088759B;
+			productRefGroup = 89B1FB5A1FB3169B0088759B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89B1FB581FB3169B0088759B /* citrus_market */,
+				89B1FB6C1FB3169B0088759B /* citrus_marketTests */,
+				89B1FB771FB3169B0088759B /* citrus_marketUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89B1FB571FB3169B0088759B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B1FB671FB3169B0088759B /* LaunchScreen.storyboard in Resources */,
+				89B1FB641FB3169B0088759B /* Assets.xcassets in Resources */,
+				89B1FB621FB3169B0088759B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B1FB6B1FB3169B0088759B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B1FB761FB3169B0088759B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89B1FB551FB3169B0088759B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B1FB5F1FB3169B0088759B /* ViewController.swift in Sources */,
+				89B1FB5D1FB3169B0088759B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B1FB691FB3169B0088759B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B1FB721FB3169B0088759B /* citrus_marketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89B1FB741FB3169B0088759B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89B1FB7D1FB3169B0088759B /* citrus_marketUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89B1FB6F1FB3169B0088759B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89B1FB581FB3169B0088759B /* citrus_market */;
+			targetProxy = 89B1FB6E1FB3169B0088759B /* PBXContainerItemProxy */;
+		};
+		89B1FB7A1FB3169B0088759B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89B1FB581FB3169B0088759B /* citrus_market */;
+			targetProxy = 89B1FB791FB3169B0088759B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		89B1FB601FB3169B0088759B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89B1FB611FB3169B0088759B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89B1FB651FB3169B0088759B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89B1FB661FB3169B0088759B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89B1FB7F1FB3169B0088759B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		89B1FB801FB3169B0088759B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89B1FB821FB3169B0088759B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = citrus_market/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sunstory.citrus-market";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89B1FB831FB3169B0088759B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = citrus_market/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sunstory.citrus-market";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		89B1FB851FB3169B0088759B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = citrus_marketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sunstory.citrus-marketTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/citrus_market.app/citrus_market";
+			};
+			name = Debug;
+		};
+		89B1FB861FB3169B0088759B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = citrus_marketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sunstory.citrus-marketTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/citrus_market.app/citrus_market";
+			};
+			name = Release;
+		};
+		89B1FB881FB3169B0088759B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = citrus_marketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sunstory.citrus-marketUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = citrus_market;
+			};
+			name = Debug;
+		};
+		89B1FB891FB3169B0088759B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = citrus_marketUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sunstory.citrus-marketUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = citrus_market;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89B1FB541FB3169B0088759B /* Build configuration list for PBXProject "citrus_market" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B1FB7F1FB3169B0088759B /* Debug */,
+				89B1FB801FB3169B0088759B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89B1FB811FB3169B0088759B /* Build configuration list for PBXNativeTarget "citrus_market" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B1FB821FB3169B0088759B /* Debug */,
+				89B1FB831FB3169B0088759B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89B1FB841FB3169B0088759B /* Build configuration list for PBXNativeTarget "citrus_marketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B1FB851FB3169B0088759B /* Debug */,
+				89B1FB861FB3169B0088759B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89B1FB871FB3169B0088759B /* Build configuration list for PBXNativeTarget "citrus_marketUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B1FB881FB3169B0088759B /* Debug */,
+				89B1FB891FB3169B0088759B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89B1FB511FB3169B0088759B /* Project object */;
+}
