@@ -9,8 +9,10 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
         super.viewDidLoad()
         
         _mobiles += ["1", "2", "3", "4"]
-        collectionView?.backgroundColor = UIColor.brown
+        collectionView?.backgroundColor = UIColor(red: 239, green: 239, blue: 243)
         collectionView?.register(MobileCell.self, forCellWithReuseIdentifier: cellId)
+        
+        setupNavigationBar()
     }
     
     override func collectionView(_ collectionView: UICollectionView,
@@ -29,22 +31,13 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (view.frame.width - 32) / 2, height: 250)
     }
-}
-
-
-class MobileCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        backgroundColor = UIColor.white
-        setupViews()
-    }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    private func setupViews() {
+    private func setupNavigationBar() {
+        navigationItem.title = "Смартфоны"
         
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.barTintColor = UIColor(red: 231, green: 125, blue: 62)
+        navigationController?.navigationBar.tintColor = UIColor.white
     }
 }
