@@ -27,9 +27,13 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
         return _mobiles.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width - 32) / 2, height: 250)
+        return CGSize(width: (view.frame.width - 32) / 2, height: 350)
     }
     
     private func setupNavigationBar() {
