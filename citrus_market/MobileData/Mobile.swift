@@ -4,11 +4,11 @@ class Mobile {
     let id: String
     var title: String
     var price: Float
-    var oldPrice: Float?
-    var image: UIImage?
+    var oldPrice: Float
+    var imageURL: String?
     
     required init?(id: String, title: String, price: Float,
-                  oldPrice: Float? = nil, image: UIImage?) {
+                  oldPrice: Float = 0, imageURL: String?) {
         if id.isEmpty {
             return nil
         }
@@ -17,6 +17,6 @@ class Mobile {
         self.title = title
         self.price = price
         self.oldPrice = oldPrice
-        self.image = image
+        self.imageURL = imageURL
     }
 }

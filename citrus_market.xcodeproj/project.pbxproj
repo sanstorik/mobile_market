@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890E99151FB4E11500EED0CE /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E99141FB4E11500EED0CE /* ImageExtension.swift */; };
 		89B1FB5D1FB3169B0088759B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB5C1FB3169B0088759B /* AppDelegate.swift */; };
 		89B1FB5F1FB3169B0088759B /* MobileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB5E1FB3169B0088759B /* MobileCollectionViewController.swift */; };
 		89B1FB641FB3169B0088759B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89B1FB631FB3169B0088759B /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 		89B1FB7D1FB3169B0088759B /* citrus_marketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB7C1FB3169B0088759B /* citrus_marketUITests.swift */; };
 		89BA3B681FB45A6B00287136 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA3B671FB45A6B00287136 /* Mobile.swift */; };
 		89BA3B6A1FB4740500287136 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA3B691FB4740500287136 /* Currency.swift */; };
+		89BA3B6C1FB47E3100287136 /* MobileCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA3B6B1FB47E3100287136 /* MobileCollectionPresenter.swift */; };
 		89C251821FB32DA300AB4387 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C251811FB32DA300AB4387 /* ColorExtension.swift */; };
 		89C251841FB3320C00AB4387 /* MobileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C251831FB3320C00AB4387 /* MobileCell.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		890E99141FB4E11500EED0CE /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		89B1FB591FB3169B0088759B /* citrus_market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = citrus_market.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B1FB5C1FB3169B0088759B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89B1FB5E1FB3169B0088759B /* MobileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCollectionViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		89B1FB7E1FB3169B0088759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89BA3B671FB45A6B00287136 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		89BA3B691FB4740500287136 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		89BA3B6B1FB47E3100287136 /* MobileCollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCollectionPresenter.swift; sourceTree = "<group>"; };
 		89C251811FB32DA300AB4387 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		89C251831FB3320C00AB4387 /* MobileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +141,7 @@
 			children = (
 				89B1FB5E1FB3169B0088759B /* MobileCollectionViewController.swift */,
 				89C251831FB3320C00AB4387 /* MobileCell.swift */,
+				89BA3B6B1FB47E3100287136 /* MobileCollectionPresenter.swift */,
 			);
 			path = MobileCollections;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			children = (
 				89C251811FB32DA300AB4387 /* ColorExtension.swift */,
 				89BA3B691FB4740500287136 /* Currency.swift */,
+				890E99141FB4E11500EED0CE /* ImageExtension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -293,10 +299,12 @@
 			files = (
 				89BA3B6A1FB4740500287136 /* Currency.swift in Sources */,
 				89BA3B681FB45A6B00287136 /* Mobile.swift in Sources */,
+				89BA3B6C1FB47E3100287136 /* MobileCollectionPresenter.swift in Sources */,
 				89C251821FB32DA300AB4387 /* ColorExtension.swift in Sources */,
 				89B1FB5F1FB3169B0088759B /* MobileCollectionViewController.swift in Sources */,
 				89B1FB5D1FB3169B0088759B /* AppDelegate.swift in Sources */,
 				89C251841FB3320C00AB4387 /* MobileCell.swift in Sources */,
+				890E99151FB4E11500EED0CE /* ImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

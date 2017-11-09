@@ -3,20 +3,18 @@ import UIKit
 class MobileCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let cellId = "mobile"
-    private var _mobiles = [Mobile!]()
+    private lazy var _presenter = MobileCollectionPresenter(collection: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let mobile = Mobile(id: "onetwo", title: "iPhone X (Silver 64 GB)",
-                            price: 2500, oldPrice: 1400, image: UIImage(named: "mobile"))
-        let mobileSecond = Mobile(id: "onetwo", title: "iPhone 8Plus (Black 64 GB)",
-                            price: 2500, image: UIImage(named: "mobile"))
-        
-        _mobiles += [mobile, mobileSecond, mobile]
-        
         collectionView?.backgroundColor = UIColor(red: 239, green: 239, blue: 243)
         collectionView?.register(MobileCell.self, forCellWithReuseIdentifier: cellId)
+        
+        _presenter.loadMobiles(atPage: 1, perPage: 10, completeHandler: {
+            [unowned self] () -> Void in
+            self.collectionView?.reloadData()
+        })
         
         setupNavigationBar()
     }
@@ -26,12 +24,12 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
                     as! MobileCell
         
-        cell.mobile = _mobiles[indexPath.row]
+        cell.mobile = _presenter.mobile(at: indexPath.row)
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return _mobiles.count
+        return _presenter.mobilesCount
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

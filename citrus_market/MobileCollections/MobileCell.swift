@@ -83,13 +83,13 @@ class MobileCell: UICollectionViewCell {
         addSubview(nameLabel)
         height += 49
         
-        if mobile?.oldPrice != nil {
+        if mobile?.oldPrice != 0 {
             oldPriceLabel.frame = CGRect(x: 12, y: height + 4,
                                      width: 50, height: 20)
             addSubview(oldPriceLabel)
         }
         
-        let xOffset: CGFloat = mobile?.oldPrice != nil ? 62 : 12
+        let xOffset: CGFloat = mobile?.oldPrice != 0 ? 62 : 12
         actualPriceLabel.frame = CGRect(x: xOffset, y: height - 8,
                                         width: frame.width / 3, height: 40)
         addSubview(actualPriceLabel)
@@ -155,8 +155,8 @@ class MobileCell: UICollectionViewCell {
         nameLabel.text = nonNullMobile.title
         actualPriceLabel.text = nonNullMobile.price.asCurrency() + "$"
         
-        if nonNullMobile.oldPrice != nil {
-            let value = nonNullMobile.oldPrice!.asCurrency()
+        if nonNullMobile.oldPrice != 0 {
+            let value = nonNullMobile.oldPrice.asCurrency()
             
             let attributedText = NSMutableAttributedString(string: value)
             attributedText.addAttribute(NSAttributedStringKey.strikethroughStyle,
@@ -164,6 +164,8 @@ class MobileCell: UICollectionViewCell {
             oldPriceLabel.attributedText = attributedText
         }
         
-        mobileImageView.image = nonNullMobile.image
+        if let url = nonNullMobile.imageURL {
+            mobileImageView.downloadImage(fromUrl: url)
+        }
     }
 }
