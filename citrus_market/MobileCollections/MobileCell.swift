@@ -59,9 +59,24 @@ class MobileCell: UICollectionViewCell {
     
     var mobile: Mobile? {
         didSet {
+            removeViews()
             setupViews()
             updateViewsOnDataChange(mobile: mobile)
         }
+    }
+    
+    private func removeViews() {
+        if _redEyeButton == nil {
+            return
+        }
+        
+        _redEyeButton.removeFromSuperview()
+        _addToFavoriteButton.removeFromSuperview()
+        _addToFavoriteButton.removeFromSuperview()
+        actualPriceLabel.removeFromSuperview()
+        oldPriceLabel.removeFromSuperview()
+        nameLabel.removeFromSuperview()
+        mobileImageView.removeFromSuperview()
     }
 
     private func setupViews() {
@@ -73,23 +88,26 @@ class MobileCell: UICollectionViewCell {
                                                 imageColor: UIColor(red: 228, green: 85, blue: 0),
                                                 action: #selector(addToShoppingListButtonClick))
         
-        var height = 7 + frame.height / 1.7
+        var height = 10 + frame.height / 1.66
         
-        mobileImageView.frame = CGRect(x: 0, y: 7, width: frame.width, height: height)
+        mobileImageView.frame = CGRect(x: 20, y: 10,
+                                       width: frame.width - 40,
+                                       height:  height)
         addSubview(mobileImageView)
         
-        nameLabel.frame = CGRect(x: 12, y: height + 4,
+        nameLabel.frame = CGRect(x: 12, y: height + 5,
                                  width: frame.width * 0.9, height: 45)
         addSubview(nameLabel)
         height += 49
         
+        var xOffset: CGFloat = 12
         if mobile?.oldPrice != 0 {
             oldPriceLabel.frame = CGRect(x: 12, y: height + 4,
                                      width: 50, height: 20)
+            xOffset = 62
             addSubview(oldPriceLabel)
         }
         
-        let xOffset: CGFloat = mobile?.oldPrice != 0 ? 62 : 12
         actualPriceLabel.frame = CGRect(x: xOffset, y: height - 8,
                                         width: frame.width / 3, height: 40)
         addSubview(actualPriceLabel)
@@ -136,15 +154,15 @@ class MobileCell: UICollectionViewCell {
     }
     
     @objc private func redEyeButtonClick() {
-        os_log("red eye")
+        NSLog("Red eye clicked, mobile id = \(mobile!.id)")
     }
     
     @objc private func addToFavoriteButtonClick() {
-        os_log("favorite click")
+        NSLog("Favorite button clicked, mobile id = \(mobile!.id)")
     }
     
     @objc private func addToShoppingListButtonClick() {
-        os_log("shopping list")
+        NSLog("Shopping list clicked, mobile id = \(mobile!.id)")
     }
     
     private func updateViewsOnDataChange(mobile: Mobile?) {
@@ -153,7 +171,7 @@ class MobileCell: UICollectionViewCell {
         }
         
         nameLabel.text = nonNullMobile.title
-        actualPriceLabel.text = nonNullMobile.price.asCurrency() + "$"
+        actualPriceLabel.text = nonNullMobile.price.asCurrency() + "₴"
         
         if nonNullMobile.oldPrice != 0 {
             let value = nonNullMobile.oldPrice.asCurrency()
@@ -165,7 +183,7 @@ class MobileCell: UICollectionViewCell {
         }
         
         if let url = nonNullMobile.imageURL {
-            mobileImageView.downloadImage(fromUrl: url)
+            mobileImageView.downloadImage(fromUrl: url, mobile: nonNullMobile)
         }
     }
 }

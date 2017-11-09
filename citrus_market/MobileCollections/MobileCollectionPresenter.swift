@@ -20,6 +20,10 @@ class MobileCollectionPresenter {
     
     func loadMobiles(atPage page: Int, perPage: Int,
                      completeHandler: @escaping () -> ()) {
+        if (_mobiles.count > 0) {
+            _mobiles.removeAll()
+        }
+        
         handleJson(fromUrl: completeJsonURL(page: page, perPage: perPage),
                    handler: completeHandler)
     }

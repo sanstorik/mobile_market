@@ -4,6 +4,7 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
 
     private let cellId = "mobile"
     private lazy var _presenter = MobileCollectionPresenter(collection: self)
+    private var _refresh: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,7 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
         })
         
         setupNavigationBar()
+        setupPullToRefresh()
     }
     
     override func collectionView(_ collectionView: UICollectionView,
@@ -24,7 +26,10 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
                     as! MobileCell
         
-        cell.mobile = _presenter.mobile(at: indexPath.row)
+        if (_presenter.mobilesCount > indexPath.row) {
+            cell.mobile = _presenter.mobile(at: indexPath.row)
+        }
+        
         return cell
     }
     
@@ -48,5 +53,23 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.barTintColor = UIColor(red: 231, green: 125, blue: 62)
         navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
+    private func setupPullToRefresh() {
+        _refresh = UIRefreshControl()
+        _refresh.tintColor = UIColor.red
+        _refresh.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
+        collectionView?.alwaysBounceVertical = true
+        collectionView?.addSubview(_refresh)
+    }
+    
+    @objc private func refresh() {
+        _presenter.loadMobiles(atPage: 1, perPage: 10, completeHandler: {
+            [unowned self] () -> Void in
+            self.collectionView?.reloadData()
+        })
+        
+        _refresh.endRefreshing()
     }
 }
