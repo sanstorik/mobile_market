@@ -6,13 +6,16 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
     private lazy var _presenter = MobileCollectionPresenter(collection: self)
     private var _refresh: UIRefreshControl!
     
+    private var _currentPage = 2
+    private let _mobilesPerPage = 10
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView?.backgroundColor = UIColor(red: 239, green: 239, blue: 243)
         collectionView?.register(MobileCell.self, forCellWithReuseIdentifier: cellId)
         
-        _presenter.loadMobiles(atPage: 1, perPage: 10, completeHandler: {
+        _presenter.loadMobiles(atPage: _currentPage, perPage: _mobilesPerPage, completeHandler: {
             [unowned self] () -> Void in
             self.collectionView?.reloadData()
         })
@@ -65,7 +68,7 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
     }
     
     @objc private func refresh() {
-        _presenter.loadMobiles(atPage: 1, perPage: 10, completeHandler: {
+        _presenter.loadMobiles(atPage: _currentPage, perPage: _mobilesPerPage, completeHandler: {
             [unowned self] () -> Void in
             self.collectionView?.reloadData()
         })
