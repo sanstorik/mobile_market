@@ -3,12 +3,18 @@ import UIKit
 class MobileCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let cellId = "mobile"
-    private var _mobiles = [String]()
+    private var _mobiles = [Mobile!]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _mobiles += ["1", "2", "3", "4"]
+        let mobile = Mobile(id: "onetwo", title: "iPhone X (Silver 64 GB)",
+                            price: 2500, oldPrice: 1400, image: UIImage(named: "mobile"))
+        let mobileSecond = Mobile(id: "onetwo", title: "iPhone 8Plus (Black 64 GB)",
+                            price: 2500, image: UIImage(named: "mobile"))
+        
+        _mobiles += [mobile, mobileSecond, mobile]
+        
         collectionView?.backgroundColor = UIColor(red: 239, green: 239, blue: 243)
         collectionView?.register(MobileCell.self, forCellWithReuseIdentifier: cellId)
         
@@ -20,6 +26,7 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
                     as! MobileCell
         
+        cell.mobile = _mobiles[indexPath.row]
         return cell
     }
     

@@ -6,7 +6,6 @@ class MobileCell: UICollectionViewCell {
         super.init(frame: frame)
         
         backgroundColor = UIColor.white
-        setupViews()
         setupBorder()
     }
 
@@ -16,7 +15,6 @@ class MobileCell: UICollectionViewCell {
     
     let mobileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "mobile")
         imageView.contentMode = .scaleAspectFit
         
         return imageView
@@ -24,7 +22,6 @@ class MobileCell: UICollectionViewCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Doogee X5 Max (Black)"
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = UIColor(red: 161, green: 161, blue: 165)
         label.numberOfLines = 2
@@ -34,7 +31,6 @@ class MobileCell: UICollectionViewCell {
     
     let oldPriceLabel: UILabel = {
         let label = UILabel()
-        label.text = "1 999"
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = UIColor(red: 161, green: 161, blue: 165)
         label.numberOfLines = 1
@@ -50,7 +46,6 @@ class MobileCell: UICollectionViewCell {
     
     let actualPriceLabel: UILabel = {
         let label = UILabel()
-        label.text = " 1 899$"
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = UIColor.black
         label.numberOfLines = 1
@@ -60,13 +55,19 @@ class MobileCell: UICollectionViewCell {
     
     private var _redEyeButton: UIButton!
     private var _addToShoppingListButton: UIButton!
-    private var _addToFavouriteButton: UIButton!
+    private var _addToFavoriteButton: UIButton!
     
-    
+    var mobile: Mobile? {
+        didSet {
+            setupViews()
+            updateViewsOnDataChange(mobile: mobile)
+        }
+    }
+
     private func setupViews() {
         _redEyeButton = createButton(imageName: "ic_remove_red_eye",
                                      action: #selector(redEyeButtonClick))
-        _addToFavouriteButton = createButton(imageName: "ic_favorite",
+        _addToFavoriteButton = createButton(imageName: "ic_favorite",
                                              action: #selector(addToFavoriteButtonClick))
         _addToShoppingListButton = createButton(imageName: "ic_add_shopping_card",
                                                 imageColor: UIColor(red: 228, green: 85, blue: 0),
@@ -82,20 +83,22 @@ class MobileCell: UICollectionViewCell {
         addSubview(nameLabel)
         height += 49
         
-        oldPriceLabel.frame = CGRect(x: 12, y: height + 4,
-                                     width: 40, height: 20)
-        addSubview(oldPriceLabel)
+        if mobile?.oldPrice != nil {
+            oldPriceLabel.frame = CGRect(x: 12, y: height + 4,
+                                     width: 50, height: 20)
+            addSubview(oldPriceLabel)
+        }
         
-        actualPriceLabel.frame = CGRect(x: 52, y: height - 8,
+        let xOffset: CGFloat = mobile?.oldPrice != nil ? 62 : 12
+        actualPriceLabel.frame = CGRect(x: xOffset, y: height - 8,
                                         width: frame.width / 3, height: 40)
         addSubview(actualPriceLabel)
-        height += 24
         
         _redEyeButton.frame = CGRect(x: 0, y: frame.height - 50,
                                      width: frame.width / 3,
                                      height: 50)
         
-        _addToFavouriteButton.frame = CGRect(x: frame.width / 3, y: frame.height - 50,
+        _addToFavoriteButton.frame = CGRect(x: frame.width / 3, y: frame.height - 50,
                                             width: frame.width / 3,
                                             height: 50)
         
@@ -105,7 +108,7 @@ class MobileCell: UICollectionViewCell {
                                                 height: 50)
         
         addSubview(_redEyeButton)
-        addSubview(_addToFavouriteButton)
+        addSubview(_addToFavoriteButton)
         addSubview(_addToShoppingListButton)
     }
     
@@ -142,5 +145,25 @@ class MobileCell: UICollectionViewCell {
     
     @objc private func addToShoppingListButtonClick() {
         os_log("shopping list")
+    }
+    
+    private func updateViewsOnDataChange(mobile: Mobile?) {
+        guard let nonNullMobile = mobile else {
+            return
+        }
+        
+        nameLabel.text = nonNullMobile.title
+        actualPriceLabel.text = nonNullMobile.price.asCurrency() + "$"
+        
+        if nonNullMobile.oldPrice != nil {
+            let value = nonNullMobile.oldPrice!.asCurrency()
+            
+            let attributedText = NSMutableAttributedString(string: value)
+            attributedText.addAttribute(NSAttributedStringKey.strikethroughStyle,
+                                        value: 1, range: NSMakeRange(0, value.count))
+            oldPriceLabel.attributedText = attributedText
+        }
+        
+        mobileImageView.image = nonNullMobile.image
     }
 }

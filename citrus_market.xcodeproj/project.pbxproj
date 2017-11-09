@@ -13,7 +13,9 @@
 		89B1FB671FB3169B0088759B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B1FB651FB3169B0088759B /* LaunchScreen.storyboard */; };
 		89B1FB721FB3169B0088759B /* citrus_marketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB711FB3169B0088759B /* citrus_marketTests.swift */; };
 		89B1FB7D1FB3169B0088759B /* citrus_marketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB7C1FB3169B0088759B /* citrus_marketUITests.swift */; };
-		89C251821FB32DA300AB4387 /* ColorExstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C251811FB32DA300AB4387 /* ColorExstension.swift */; };
+		89BA3B681FB45A6B00287136 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA3B671FB45A6B00287136 /* Mobile.swift */; };
+		89BA3B6A1FB4740500287136 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA3B691FB4740500287136 /* Currency.swift */; };
+		89C251821FB32DA300AB4387 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C251811FB32DA300AB4387 /* ColorExtension.swift */; };
 		89C251841FB3320C00AB4387 /* MobileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C251831FB3320C00AB4387 /* MobileCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +49,9 @@
 		89B1FB781FB3169B0088759B /* citrus_marketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = citrus_marketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B1FB7C1FB3169B0088759B /* citrus_marketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = citrus_marketUITests.swift; sourceTree = "<group>"; };
 		89B1FB7E1FB3169B0088759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89C251811FB32DA300AB4387 /* ColorExstension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExstension.swift; sourceTree = "<group>"; };
+		89BA3B671FB45A6B00287136 /* Mobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
+		89BA3B691FB4740500287136 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		89C251811FB32DA300AB4387 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		89C251831FB3320C00AB4387 /* MobileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +144,8 @@
 		89C251861FB3324700AB4387 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				89C251811FB32DA300AB4387 /* ColorExstension.swift */,
+				89C251811FB32DA300AB4387 /* ColorExtension.swift */,
+				89BA3B691FB4740500287136 /* Currency.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 		89C251871FB3326100AB4387 /* MobileData */ = {
 			isa = PBXGroup;
 			children = (
+				89BA3B671FB45A6B00287136 /* Mobile.swift */,
 			);
 			path = MobileData;
 			sourceTree = "<group>";
@@ -285,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89C251821FB32DA300AB4387 /* ColorExstension.swift in Sources */,
+				89BA3B6A1FB4740500287136 /* Currency.swift in Sources */,
+				89BA3B681FB45A6B00287136 /* Mobile.swift in Sources */,
+				89C251821FB32DA300AB4387 /* ColorExtension.swift in Sources */,
 				89B1FB5F1FB3169B0088759B /* MobileCollectionViewController.swift in Sources */,
 				89B1FB5D1FB3169B0088759B /* AppDelegate.swift in Sources */,
 				89C251841FB3320C00AB4387 /* MobileCell.swift in Sources */,
