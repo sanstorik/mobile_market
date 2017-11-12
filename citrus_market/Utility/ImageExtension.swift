@@ -1,31 +1,36 @@
 import UIKit
+import Alamofire
+
+fileprivate let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
-    func downloadImage(from url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit,
-                       mobile: Mobile) {
-        let cachedMobile = mobile
-        if let image = cachedMobile.image {
-            self.image = image
+    func downloadImage(from url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+        
+        contentMode = mode
+        image = nil
+        
+        if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
+            image = cachedImage
             return
         }
         
-        contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        Alamofire.request(url).responseData { response in
             guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
+                let mimeType = response.response?.mimeType, mimeType.hasPrefix("image"),
+                let data = response.data, response.error == nil,
                 let image = UIImage(data: data)
                 else { return }
+            
             DispatchQueue.main.async() {
+                imageCache.setObject(image, forKey: url.absoluteString as NSString)
+                
                 self.image = image
-                cachedMobile.image = image
             }
-            }.resume()
+            }
     }
-    func downloadImage(fromUrl url: String, contentMode mode: UIViewContentMode = .scaleAspectFit,
-                       mobile: Mobile) {
+    
+    func downloadImage(fromUrl url: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         guard let url = URL(string: url) else { return }
-        downloadImage(from: url, contentMode: mode, mobile: mobile)
+        downloadImage(from: url, contentMode: mode)
     }
 }

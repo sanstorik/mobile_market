@@ -57,6 +57,8 @@ class MobileCell: UICollectionViewCell {
     private var _addToShoppingListButton: UIButton!
     private var _addToFavoriteButton: UIButton!
     
+    var eventHolder: ((_ mobile: Mobile?) -> Void)?
+    
     var mobile: Mobile? {
         didSet {
             removeViews()
@@ -124,7 +126,6 @@ class MobileCell: UICollectionViewCell {
                                                 y: frame.height - 50,
                                                 width: frame.width / 3,
                                                 height: 50)
-        
         addSubview(_redEyeButton)
         addSubview(_addToFavoriteButton)
         addSubview(_addToShoppingListButton)
@@ -154,7 +155,7 @@ class MobileCell: UICollectionViewCell {
     }
     
     @objc private func redEyeButtonClick() {
-        NSLog("Red eye clicked, mobile id = \(mobile!.id)")
+        eventHolder?(mobile)
     }
     
     @objc private func addToFavoriteButtonClick() {
@@ -183,7 +184,7 @@ class MobileCell: UICollectionViewCell {
         }
         
         if let url = nonNullMobile.imageURL {
-            mobileImageView.downloadImage(fromUrl: url, mobile: nonNullMobile)
+            mobileImageView.downloadImage(fromUrl: url)
         }
     }
 }

@@ -1,4 +1,5 @@
 import Foundation
+import Alamofire
 
 class MobileCollectionPresenter {
     private let _collection: MobileCollectionViewController
@@ -20,12 +21,15 @@ class MobileCollectionPresenter {
     
     func loadMobiles(atPage page: Int, perPage: Int,
                      completeHandler: @escaping () -> ()) {
-        if (_mobiles.count > 0) {
-            _mobiles.removeAll()
-        }
-        
         handleJson(fromUrl: completeJsonURL(page: page, perPage: perPage),
                    handler: completeHandler)
+    }
+    
+    func clearAndLoadMobiles(atPage page: Int, perPage: Int,
+                             completeHandler: @escaping () -> ()) {
+        _mobiles.removeAll()
+        loadMobiles(atPage: page, perPage: perPage,
+                    completeHandler: completeHandler)
     }
     
     private func completeJsonURL(page: Int, perPage: Int) -> String {
@@ -40,34 +44,29 @@ class MobileCollectionPresenter {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { [unowned self] (data,response,error) in
-            guard let data = data, error == nil else {
+        Alamofire.request(url).responseJSON { response in
+            guard let json = response.result.value as? [String: Any] else {
                 return
             }
-   
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                    as! [String: Any]
-                
-                let dataArray = json["data"] as! [String: Any]
-                let mobilesArray = dataArray["list"] as! NSArray
-                
-                for mobileDictionary in mobilesArray {
-                    if let mobile = mobileDictionary as? NSDictionary {
-                        let newMobile = Mobile(id: String(describing: mobile["id"]),
-                                               title: mobile["name"] as! String,
-                                               price: mobile["price"] as! Float,
-                                               oldPrice: mobile["base_price"] as! Float,
-                                               imageURL: mobile["image"] as? String)!
-                        
-                        self._mobiles.append(newMobile)
-                    }
+            
+            let dataArray = json["data"] as! [String: Any]
+            let mobilesArray = dataArray["list"] as! NSArray
+            
+            for mobileDictionary in mobilesArray {
+                if let mobile = mobileDictionary as? NSDictionary {
+                    let newMobile = Mobile(id: String(describing: mobile["id"]),
+                                           title: mobile["name"] as! String,
+                                           price: mobile["price"] as! Float,
+                                           oldPrice: mobile["base_price"] as! Float,
+                                           imageURL: mobile["image"] as? String)!
+                    
+                    self._mobiles.append(newMobile)
                 }
-            } catch {
-                print("Couln't parse json")
             }
-
-            DispatchQueue.main.async(execute: { handler() })
-        }.resume()
+            
+            DispatchQueue.main.async {
+                handler()
+            }
+        }
     }
 }

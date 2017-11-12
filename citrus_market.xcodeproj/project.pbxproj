@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24AF8AA956AE88B13A43DCE8 /* Pods_citrus_market.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68955F58242C04F7EBC7211 /* Pods_citrus_market.framework */; };
 		890E99151FB4E11500EED0CE /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890E99141FB4E11500EED0CE /* ImageExtension.swift */; };
 		89B1FB5D1FB3169B0088759B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB5C1FB3169B0088759B /* AppDelegate.swift */; };
 		89B1FB5F1FB3169B0088759B /* MobileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1FB5E1FB3169B0088759B /* MobileCollectionViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		890E99141FB4E11500EED0CE /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		8998ABC6C46D621F536F4FDD /* Pods-citrus_market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-citrus_market.release.xcconfig"; path = "Pods/Target Support Files/Pods-citrus_market/Pods-citrus_market.release.xcconfig"; sourceTree = "<group>"; };
 		89B1FB591FB3169B0088759B /* citrus_market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = citrus_market.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B1FB5C1FB3169B0088759B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89B1FB5E1FB3169B0088759B /* MobileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCollectionViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		89BA3B6B1FB47E3100287136 /* MobileCollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCollectionPresenter.swift; sourceTree = "<group>"; };
 		89C251811FB32DA300AB4387 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		89C251831FB3320C00AB4387 /* MobileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCell.swift; sourceTree = "<group>"; };
+		BCFCE49DD0517C5BA20BF891 /* Pods-citrus_market.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-citrus_market.debug.xcconfig"; path = "Pods/Target Support Files/Pods-citrus_market/Pods-citrus_market.debug.xcconfig"; sourceTree = "<group>"; };
+		C68955F58242C04F7EBC7211 /* Pods_citrus_market.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_citrus_market.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AF8AA956AE88B13A43DCE8 /* Pods_citrus_market.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300D112A689D9B83CAEA4A47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C68955F58242C04F7EBC7211 /* Pods_citrus_market.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		89B1FB501FB3169B0088759B = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +104,8 @@
 				89B1FB701FB3169B0088759B /* citrus_marketTests */,
 				89B1FB7B1FB3169B0088759B /* citrus_marketUITests */,
 				89B1FB5A1FB3169B0088759B /* Products */,
+				94E04184D6F92E145981C1A3 /* Pods */,
+				300D112A689D9B83CAEA4A47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +179,15 @@
 			path = MobileData;
 			sourceTree = "<group>";
 		};
+		94E04184D6F92E145981C1A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCFCE49DD0517C5BA20BF891 /* Pods-citrus_market.debug.xcconfig */,
+				8998ABC6C46D621F536F4FDD /* Pods-citrus_market.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89B1FB811FB3169B0088759B /* Build configuration list for PBXNativeTarget "citrus_market" */;
 			buildPhases = (
+				0CF48FD0377F70D01EEFECBC /* [CP] Check Pods Manifest.lock */,
 				89B1FB551FB3169B0088759B /* Sources */,
 				89B1FB561FB3169B0088759B /* Frameworks */,
 				89B1FB571FB3169B0088759B /* Resources */,
+				5661D14097250E88D2C4C3CD /* [CP] Embed Pods Frameworks */,
+				C47CEB7D41CC3BBF70FCCB08 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +318,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CF48FD0377F70D01EEFECBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-citrus_market-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5661D14097250E88D2C4C3CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-citrus_market/Pods-citrus_market-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-citrus_market/Pods-citrus_market-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C47CEB7D41CC3BBF70FCCB08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-citrus_market/Pods-citrus_market-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89B1FB551FB3169B0088759B /* Sources */ = {
@@ -460,6 +541,7 @@
 		};
 		89B1FB821FB3169B0088759B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCFCE49DD0517C5BA20BF891 /* Pods-citrus_market.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -474,6 +556,7 @@
 		};
 		89B1FB831FB3169B0088759B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8998ABC6C46D621F536F4FDD /* Pods-citrus_market.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

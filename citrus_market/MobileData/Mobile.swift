@@ -6,7 +6,6 @@ class Mobile {
     var price: Float
     var oldPrice: Float
     var imageURL: String?
-    var image: UIImage?
     
     required init?(id: String, title: String, price: Float,
                   oldPrice: Float = 0, imageURL: String?) {
