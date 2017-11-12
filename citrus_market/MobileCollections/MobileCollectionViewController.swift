@@ -98,8 +98,8 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
     }
     
     @objc private func refresh() {
-        _currentPage = 0
-        _presenter.clearAndLoadMobiles(atPage: 0, perPage: _mobilesPerPage, completeHandler: {
+        _currentPage = 1
+        _presenter.clearAndLoadMobiles(atPage: 1, perPage: _mobilesPerPage, completeHandler: {
             [unowned self] () -> Void in
             self.collectionView?.reloadData()
         })
