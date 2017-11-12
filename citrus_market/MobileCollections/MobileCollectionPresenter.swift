@@ -15,8 +15,8 @@ class MobileCollectionPresenter {
         _collection = collection
     }
     
-    func mobile(at index: Int) -> Mobile {
-        return _mobiles[index]
+    func mobile(at index: Int) -> Mobile? {
+        return index < _mobiles.count ? _mobiles[index] : nil
     }
     
     func loadMobiles(atPage page: Int, perPage: Int,

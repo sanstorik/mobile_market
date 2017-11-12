@@ -30,12 +30,10 @@ class MobileCollectionViewController: UICollectionViewController, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
                     as! MobileCell
         
-        if (_presenter.mobilesCount > indexPath.row) {
-            cell.mobile = _presenter.mobile(at: indexPath.row)
-            
-            cell.eventHolder = { (mobile) -> Void in
-                print(mobile?.id ?? "no mobile")
-            }
+        cell.mobile = _presenter.mobile(at: indexPath.row)
+        
+        cell.eventHolder = { (mobile) -> Void in
+            print(mobile?.id ?? "no mobile")
         }
         
         let mobilesCount = _mobilesPerPage * _currentPage
